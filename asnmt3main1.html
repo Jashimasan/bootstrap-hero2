@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Assignment 3</title>
+    <style>
+        .icon-container {
+            display: inline-block;
+            transition: transform 0.3s ease;
+            color: grey;
+            font-size: 50px;
+            line-height: 1;
+            margin-top: 10px;
+        }
+        .icon-container:hover {
+            transform: rotate(250deg);
+        }
+        .divider-line {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .divider-line-custom {
+            width: 50px;
+            height: 1px;
+            background-color: white;
+        }
+        .custom-input {
+            margin: 10px 0;
+        }
+        body {
+            overflow-x: hidden;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        .custom-input {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-radius: 0;
+            border-bottom: 1px solid #ced4da;
+        }
+        a:visited {
+            color: pink;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:hover {
+            color: red;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+        .custom-margin {
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+        .portfolio-margin {
+            margin: 40px 0;
+        }
+        .portfolio-hover {
+            background-color: #1cbc9c;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <!-- On scroll header -->
+    <div class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(5, 50, 84);">     
+            <a class="navbar-brand">Start Bootstrap</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#portfolio-section">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-section">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-section">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Heading -->
+    <div class="container-fluid text-center" style="background-color: #1cbc9c;">
+        <div class="row justify-content-center pt-5">
+            <img src="./pictures/profile pic with no backround.png" class="img-fluid" style="max-width: 250px;" alt="Profile Picture"/>
+        </div>
+        <div class="row justify-content-center text-white text-uppercase fs-1 fw-bold mt-2">
+            <h1>Start Bootstrap</h1>
+        </div>
+        <div class="divider-line">
+            <div class="divider-line-custom"></div>
+            <div class="icon-container"><i class="fa fa-cog" aria-hidden="true"></i></div>
+            <div class="divider-line-custom"></div>
+        </div>
+        <p class="text-white">Full-Stack Developer</p>
+    </div>
+    <!-- Portfolio Section -->
+    <div id="portfolio-section" class="container-fluid text-center portfolio-margin">
+        <h1>Portfolio</h1>
+        <div> 
+            <i class="fa fa-star icon" aria-hidden="true" style="font-size: 3rem;"></i> 
+        </div>
+        <!-- Pictures start -->
+        <div class="justify-content-center">
+            <!-- 1st row -->
+            <div class="row">
+                <div class="col portfolio-hover" data-toggle="modal" data-target="#pictureModal" data-src="./pictures/kurtzack picture antwar.svg">
+                    <img src="./pictures/kurtzack picture antwar.svg" alt="antwar" class="img-fluid">
+                </div>
+                <div class="col portfolio-hover" data-toggle="modal" data-target="#pictureModal" data-src="./pictures/kurtzack picture building.svg">
+                    <img src="./pictures/kurtzack picture building.svg" alt="building" class="img-fluid">
+                </div>
+                <div class="col portfolio-hover" data-toggle="modal" data-target="#pictureModal" data-src="./pictures/kurtzack picture oilrig.svg">
+                    <img src="./pictures/kurtzack picture oilrig.svg" alt="oilrig" class="img-fluid">
+                </div>
+            </div>
+            <!-- 2nd row -->
+            <div class="row">
+                <div class="col portfolio-hover" data-toggle="modal" data-target="#pictureModal" data-src="./pictures/kurtzack picture building.svg">
+                    <img src="./pictures/kurtzack picture building.svg" alt="blackhole" class="img-fluid">
+                </div>
+                <div class="col portfolio-hover" data-toggle="modal" data-target="#pictureModal" data-src="./pictures/kurtzack picture space.svg">
+                    <img src="./pictures/kurtzack picture space.svg" alt="space" class="img-fluid">
+                </div>
+                <div class="col portfolio-hover" data-toggle="modal" data-target="#pictureModal" data-src="./pictures/kurtzack picture oilrig.svg">
+                    <img src="./pictures/kurtzack picture oilrig.svg" alt="oilrig" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Picture Popup -->
+    <div class="modal fade" id="pictureModal" tabindex="-1" aria-labelledby="pictureModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pictureModalLabel">Picture</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img id="pictureModalImage" src="" class="img-fluid" alt="Popup Image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about-section" class="container-fluid text-center text-white mt-5" style="background-color: #1cbc9c;">
+        <h2 >About</h2>
+        <div class="container-fluid text-center">
+            <div class="row justify-content-center">
+                <div class="col-10 custom-margin">
+                    <div class="row">
+                        <div class="col">
+                            <p>Freelancer.com is the world's largest freelancing and crowdsourcing marketplace by number of users and projects. We connect over 74,065,327 employers and freelancers globally from over 247 countries, regions and territories. Through our marketplace, employers can hire freelancers to do work in areas such as software development, writing, data entry and design right through to engineering, the sciences, sales and marketing, accounting and legal services.</p>
+                        </div>
+                        <div class="col">
+                            <p>The video below illustrates the Freelancer online economy. The pink lines indicate where projects are being posted by employers, and the blue lines indicate where the projects are being performed by freelancers. Thicker lines indicate a higher dollar volume of work. White dots indicate the location of Freelancer's users.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact-section" class="container-fluid text-center">
+        <h1>Contact Me</h1>
+        <div class="container mt-5">
+            <div><input type="text" class="form-control custom-input mt-5" placeholder="Full Name" maxlength="20"></div>
+            <div><input type="email" class="form-control custom-input mt-5" placeholder="Email Address" maxlength="20"></div>
+            <div><input type="number" class="form-control custom-input mt-5" placeholder="Phone Number" maxlength="20"></div>
+            <div><textarea rows="5" class="form-control custom-input mt-5" placeholder="Message"></textarea></div>
+            <button type="submit" class="btn btn-outline-dark mt-5">Send</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid text-center mt-5" style="background-color: rgba(9, 89, 147, 1);">
+        <div class="container text-center text-white">
+            <div class="row" style="font-size: larger;">
+                <div class="col">
+                    Location
+                </div>
+                <div class="col">
+                    Around the web
+                </div>
+                <div class="col">
+                    About Freelancer
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    In world
+                </div>
+                <div class="col">
+                    <a href="https://www.google.com/" target="_blank"><i class="fa fa-battery-full" aria-hidden="true"></i></a>
+                </div>
+                <div class="col">
+                    <a href="https://github.com/" target="_blank">startbootstrap</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="background-color: #053254;">
+        <p class="text-white m-0">© 2024 Your Website</p>
+    </div>
+
+    <!-- Optional: JavaScript for Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $('#pictureModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget);
+            var src = button.data('src');
+            var modal = $(this);
+            modal.find('.modal-body img').attr('src', src);
+        });
+    </script>
+</body>
+</html>
